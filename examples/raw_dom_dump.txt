@@ -1,0 +1,27 @@
+﻿<div class="header" style="background:#fff;" data-tracking="header">
+  <h1>Welcome to My LLM Demo</h1>
+  <nav>
+    <ul>
+      <li><a href="/home" data-analytics="nav-home">Home</a></li>
+      <li><a href="/about" data-analytics="nav-about">About</a></li>
+      <li><a href="/contact" data-analytics="nav-contact">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+<section class="content" id="main" data-section="demo">
+  <article>
+    <p>Here is a <strong>large</strong> block of text that mimics a model output with lots of HTML markup, inline styles, data attributes, and repeated whitespace.
+    It includes JSON‑like snippets: {\"key\": \"value\", \"list\": [1,2,3,4,5]} and some script tags.
+    </p>
+    <script type="text/javascript">
+      console.log('debug info');
+    </script>
+    <style>
+      .hidden {display:none;}
+    </style>
+  </article>
+</section>
+<footer data-tracking="footer" style="color:#333;">
+  <p>© 2024 MyCompany. All rights reserved.</p>
+  <a href="https://example.com/terms" data-link="terms">Terms</a>
+</footer>
