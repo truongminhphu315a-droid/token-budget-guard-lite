@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test compact_payload.py
+        run: python compact_payload.py examples/raw_dom_dump.txt
+
+  test-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Benchmark_Token_Cost.ps1
+        run: pwsh -NoProfile -ExecutionPolicy Bypass -File Benchmark_Token_Cost.ps1
